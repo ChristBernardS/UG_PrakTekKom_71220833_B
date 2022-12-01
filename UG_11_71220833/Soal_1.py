@@ -1,7 +1,5 @@
 print('select operation.\n1.Add\n2.Subtract\n3.Multiply\n4.Divide')
 choice = int(input('Enter choice(1/2/3/4): '))
-firstnumber = float(input('Enter first number: '))
-secondnumber = float(input('Enter second number: '))
 
 
 def Add():
@@ -31,13 +29,16 @@ def Divide():
     return dividexy
 
 
-if choice == 1:
-    Add()
-elif choice == 2:
-    Substract()
-elif choice == 3:
-    Multiply()
-elif choice == 4:
-    Divide()
+if choice in (1, 2, 3, 4):
+    firstnumber = float(input('Enter first number: '))
+    secondnumber = float(input('Enter second number: '))
+    if choice == 1:
+        Add()
+    elif choice == 2:
+        Substract()
+    elif choice == 3:
+        Multiply()
+    elif choice == 4:
+        Divide()
 else:
-    ('Pilihan menu tidak tersedia\nUlangi program dan pilih (1/2/3/4)')
+    print('Pilihan menu tidak tersedia\nUlangi program dan pilih (1/2/3/4)')
